@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <form action="#" method="POST" id="dynamicForm">
+            <div class="option-wrapper">
+                <select class="dropdown option-label" id="productOption" onchange="adjustVisibility(this.value)">
+                    <option value="no_option">Välj produkt</option>
+                    <option value="foil_option">Folie</option>
+                    <option value="tube_option">Slang</option>
+                    <option value="folded_tube_option">Slang m. invik</option>
+                    <option value="huv_option">Pallhuv</option>
+                    <option value="folded_huv_option">Pallhuv m. invik</option>
+                    <option value="sheet_option">Toppark</option>
+                </select>
+            </div>
+            <div class="input-wrapper" id="spoolDiameterWrapper">
+                <label class="input-label" for="spool_diameter">Bobin diameter (mm):</label>
+                <input type="number" id="spool_diameter" class="input-field" placeholder="Bobin diameter (mm)">
+            </div>
+            <!-- Additional Inputs -->
+            <div class="input-wrapper" id="lengthWrapper">
+                <label class="input-label" for="length">Längd (m):</label>
+                <input type="number" id="length" class="input-field" placeholder="Längd (m)">
+            </div>
+            <div class="input-wrapper" id="thicknessWrapper">
+                <label class="input-label" for="thickness">Tjocklek (mm):</label>
+                <input type="number" id="thickness" class="input-field" placeholder="Tjocklek (mm)">
+            </div>
+            <div class="input-wrapper" id="huvAmountWrapper">
+                <label class="input-label" for="huv_amount">Huvar per bobin (st):</label
+                ><input type="number" id="huv_amount" class="input-field" placeholder="Huvar per bobin (st)">
+            </div>
+            <div class="input-wrapper" id="huvLengthWrapper">
+                <label class="input-label" for="huv_length">Huvlängd (mm):</label>
+                <input type="number" id="huv_length" class="input-field" placeholder="Huvlängd (mm)">
+            </div>
+            <div class="input-wrapper" id="sheetAmountWrapper">
+                <label class="input-label" for="sheet_amount">Ark per bobin (st):</label
+                ><input type="number" id="sheet_amount" class="input-field" placeholder="Ark per bobin (st)">
+            </div>
+            <div class="input-wrapper" id="sheetLengthWrapper">
+                <label class="input-label" for="sheet_length">Arklängd (mm):</label>
+                <input type="number" id="sheet_length" class="input-field" placeholder="Arklängd (mm)">
+            </div>
+            <div class="submit-wrapper" id="submitWrapper" onclick="handleOption()">
+                <button type="button" class="submit-button">Beräkna diameter</button>
+            </div>
+            <div class="result-wrapper" id="resultWrapper">
+                <label id="result_label"></label>
+                <label id="count_label"></label>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

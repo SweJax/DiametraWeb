@@ -1,0 +1,81 @@
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option-wrapper, .result-wrapper {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+}
+.option-label {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #E8E8E8;
+}
+.header, .input-wrapper, .submit-wrapper {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    display: none; /* Initially hide everything */
+    position: relative;
+}
+.header {
+    display: block; /* Always show the header */
+}
+.input-field, .dropdown {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 5%;
+    border: none;
+    background-color: #555;
+    color: white;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-label {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #E8E8E8;
+}
+.submit-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #E8E8E8;
+}
+.submit-button:hover {
+    background-color: #666;
+}
